@@ -1,0 +1,77 @@
+<div class="container">
+    <h2>Resumen Usuario</h2>
+    <form>
+        <div class="form-row separation">
+            <h5 class="form-text text-muted">El usuario se ha actualizado exitosamente</h5>
+        </div>
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="id">Número único Usuario</label>
+                <input type="text" class="form-control" id="id" [(ngModel)]="usuario.id"
+                name="id" disabled>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="tipoUsuario">Tipo de Usuario</label>
+                <input class="form-control" id="tipoUsuario" [(ngModel)]="usuario.tipoUsuario"
+                name="tipoUsuario" disabled>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="estatus">Estatus</label>
+                <input class="form-control" id="estatus" [(ngModel)]="usuario.estatus"
+                name="estatus" disabled>
+            </div>
+        
+        </div>
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="nombres">Nombre(s)</label>
+                <input type="text" class="form-control" id="nombres" [(ngModel)]="usuario.nombre" 
+                name="nombre" disabled>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="cliente">Cliente</label>
+                <input class="form-control" id="cliente" [(ngModel)]="usuario.cliente" 
+                name="cliente" disabled>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="elementoEstructura">Elemento de Estructura</label>
+                <input class="form-control" id="elementoEstructura" [(ngModel)]="usuario.elementoEstructura" 
+                name="elementoEstructura" disabled>  
+            </div> 
+        </div>
+        <div class="form-row separation">
+            <h5 class="form-text text-muted">¿Qué deseas hacer?</h5>
+        </div>
+            <h6 class="form-text text-muted">&nbsp;&nbsp;&nbsp;<i class="fas fa-caret-right color"></i> Selecciona una de las opciones</h6>    
+    </form>
+
+    <div>
+        <div class="row centrar">
+          <div class="col-lg-3">
+            <i class="fas fa-user-plus fa-4x" routerLink="/addupdate"></i>
+            <h4>Dar de alta un</h4> 
+            <h4>nuevo usuario</h4>     
+            <p>Crear un nuevo usuario.Aquí ingresas datos asignas perfiles de acceso e información.</p>
+          </div>
+          <div class="col-lg-3">
+            <i class="fas fa-user-edit fa-4x" routerLink="/table"></i>
+            <h4>Editar un usuario</h4> 
+            <h4>existente</h4>  
+            <p>Modificar usuarios existentes.Aquí podrás consultar,modificar activar desactivar o eliminar usuarios.</p>
+          </div>
+          <div class="col-lg-3">
+            <i class="fas fa-sticky-note fa-4x"></i>
+            <h4>Asignar perfiles a</h4> 
+            <h4>un usuario</h4>  
+            <p>Crea o actualiza el registro del usuario administrador.</p>
+          </div>
+          <div class="col-lg-3">
+            <i class="fas fa-users fa-4x"></i>
+            <h4>Carga Masiva de</h4> 
+            <h4>usuarios</h4>  
+            <p>Aquí cargas un archivo Excel con los usuarios que deseas crear.</p>
+          </div>
+        </div>
+    </div>
+
+</div>

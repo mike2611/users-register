@@ -1,0 +1,16 @@
+tr.color{
+    background-color: rgb(224, 117, 28);
+    color: whitesmoke;
+}
+
+i:hover{
+    cursor: pointer;
+}
+
+i.color{
+    color: rgb(224, 117, 28);
+}
+
+.container{
+    margin: .25rem 10% .25rem 15%;   
+}

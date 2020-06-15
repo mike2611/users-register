@@ -1,0 +1,44 @@
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr class="color">
+                <th colspan="6" >Usuarios</th>
+                <th scope="col">
+                    <i class="fas fa-search"></i>
+                </th>
+                <th scope="col" routerLink="/addupdate"> 
+                    <i class="fas fa-user-plus"></i>
+                </th>
+            </tr>
+        <tr>
+            <th scope="col">No.Trabajador</th>
+            <th scope="col">Nombre(s)</th>
+            <th scope="col">Apellido Paterno</th>
+            <th scope="col">Apellido Materno</th>
+            <th scope="col">Tipo Usuario</th>
+            <th scope="col">Estatus</th>
+            <th></th>
+            <th></th>  
+        </tr>
+        </thead>
+        
+        <tbody>
+            <tr *ngFor = "let usuario of usuarios">
+                <td scoper="row">{{usuario.numeroTrabajador}}</td>
+                <td>{{usuario.nombre}}</td>
+                <td>{{usuario.apellidoPaterno}}</td>
+                <td>{{usuario.apellidoMaterno}}</td>
+                <td>{{usuario.tipoUsuario}}</td>
+                <td>{{usuario.estatus}}</td>
+                <td routerLink="/addupdate/{{usuario.id}}">
+                    <i class="fas fa-pencil-alt"></i>
+                </td>
+                <td (click)="delete(usuario)">
+                    <i class="far fa-trash-alt i color"></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</div>

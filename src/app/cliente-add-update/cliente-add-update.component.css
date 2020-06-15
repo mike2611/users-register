@@ -1,0 +1,24 @@
+.container{
+    margin: .25rem 10% .25rem 15%;   
+}
+
+.separation{
+    border-bottom: 1px solid rgb(177, 177, 177);
+}
+
+.btn-color{
+    background-color: rgb(224, 117, 28);
+    color: white;
+}
+
+h2{
+   color: rgb(230, 128, 45);
+}
+
+
+i.color{
+    color: rgb(230, 128, 45);
+}
+
+
+

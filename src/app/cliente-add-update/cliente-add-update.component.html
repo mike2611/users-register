@@ -1,0 +1,144 @@
+<div class="container">
+        <h2>{{titulo}} Usuario</h2>
+    <form #formUsuarios="ngForm">
+        <div class="form-row separation">
+            <h5 class="form-text text-muted">&nbsp;&nbsp;&nbsp;<i class="fas fa-caret-right color"></i>Ingresa los datos del usuario en los campos correspondientes</h5>
+        </div>
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="tipoUsuario">Tipo de Usuario</label>
+            <select class="form-control" id="tipoUsuario" placeholder="Selecciona" 
+            [(ngModel)]="usuario.tipoUsuario" name="tipoUsuario" required>
+                <option disabled hidden selected>Selecciona</option>
+                <option>Tipo1</option>
+                <option>Tipo2</option>
+                <option>Tipo3</option>
+            </select>   
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="areas">Áreas</label>
+            <select class="form-control" id="areas" placeholder="Selecciona" 
+            [(ngModel)]="usuario.areas" name="areas" required>
+                <option disabled hidden selected>Selecciona</option>
+                <option>Area1</option>
+                <option>Area2</option>
+                <option>Area3</option>
+            </select>  
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="estatus">Estatus</label>
+            <select class="form-control" id="estatus" placeholder="Activo" 
+            [(ngModel)]="usuario.estatus" name="estatus" required>
+                <option disabled hidden selected>Selecciona</option>
+                <option>Activo</option>
+                <option>Inactivo</option>
+            </select>  
+          </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+              <label for="id">Número único Usuario</label>
+              <input type="text" class="form-control" id="id" maxlength="11" 
+              [(ngModel)]="usuario.id" name="id" disabled>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="numeroTrabajador">Número del Trabajador</label>
+                <input type="text" class="form-control" id="numeroTrabajador" placeholder="Es el número de nómina" maxlength="11" 
+                [(ngModel)]="usuario.numeroTrabajador" name="numeroTrabajador" required>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="usuario">Usuario</label>
+                <input type="text" class="form-control" id="usuario" maxlength="100" 
+                [(ngModel)]="usuario.user" name="usuario" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="cliente">Cliente</label>
+                <select class="form-control" id="cliente" placeholder="Selecciona" 
+                [(ngModel)]="usuario.cliente" name="cliente" required>
+                    <option disabled hidden selected>Selecciona</option>
+                    <option>Cliente1</option>
+                    <option>Cliente2</option>
+                    <option>Cliente3</option>
+                </select>  
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="elementoEstructura">Elemento de Estructura</label>
+                <select class="form-control" id="elementoEstructura" placeholder="Selecciona" 
+                [(ngModel)]="usuario.elementoEstructura" name="elementoEstructura" required>
+                    <option disabled hidden selected>Selecciona</option>
+                    <option>Elemento1</option>
+                    <option>Elemento2</option>
+                    <option>Elemento3</option>
+                </select>  
+            </div>
+        </div>
+        <div class="form-row separation">
+            <h5 class="form-text text-muted">Datos Personales</h5>
+        </div>
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+              <label for="nombres">Nombre(s)</label>
+              <input type="text" class="form-control" maxlength="50" id="nombres" 
+              [(ngModel)]="usuario.nombre" name="nombre" required>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="apellidoPaterno">Apellido Paterno</label>
+                <input type="text" class="form-control" maxlength="25" id="apellidoPaterno" 
+                [(ngModel)]="usuario.apellidoPaterno" name="apellidoPaterno" required>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="apellidoMaterno">Apellido Materno</label>
+                <input type="text" class="form-control" maxlength="25" id="apellidoMaterno" 
+                [(ngModel)]="usuario.apellidoMaterno" name="apellidoMaterno">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+              <label for="nombres">Correo oficina</label>
+              <input type="email" placeholder="correo@dominio.com" class="form-control" maxlength="25" id="nombres" 
+              [(ngModel)]="usuario.correoOficina" name="correoOficina" required>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="telefonoOficina">Teléfono oficina</label>
+                <input type="text" class="form-control" id="telefonoOficina" maxlength="50"
+                [(ngModel)]="usuario.telefonoOficina" name="telefonoOficina">
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="extensionOficina">Extensión oficina</label>
+                <input type="number" class="form-control" id="extensionOficina" maxlength="5"
+                [(ngModel)]="usuario.extensionOficina" name="extensionOficina">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+              <label for="movil1">Móvil 1</label>
+              <input type="email"  class="form-control" id="movil1" maxlength="50"
+              [(ngModel)]="usuario.movil1" name="movil1">
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="movil2">Móvil 2</label>
+                <input type="email" placeholder="Opcional" class="form-control" id="movil2" maxlength="50"
+                [(ngModel)]="usuario.movil2" name="movil2">
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="telefonoCasa">Teléfono casa</label>
+                <input type="email" placeholder="Opcional" class="form-control" id="telefonoCasa" maxlength="50"
+                [(ngModel)]="usuario.telefonoCasa" name="telefonoCasa">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="fecha">Fecha de Nacimiento</label>
+                <input type="date" class="form-control" id="fecha" 
+                [(ngModel)]="usuario.fechaNacimiento" name="fechaNacimiento" required>
+            </div>
+        </div>
+        
+        <div class="form-row justify-content-center">
+            <button class="btn btn-secondary m-2" type="button" (click)="goBack()">Cancelar</button>
+            <button class="btn m-2 btn-color" type="button" (click)="save()" routerLink="/resumen/{{usuario.id}}">Guardar</button>
+        </div>
+      </form>
+</div>
