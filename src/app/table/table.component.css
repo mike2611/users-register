@@ -34,7 +34,12 @@ h1{
     color: rgb(230, 128, 45);
  }
 
- .separation{
+.separation{
     border-bottom: 1px solid rgb(177, 177, 177);
 }
+
+.paginator{
+    text-align: right;
+}
+
 

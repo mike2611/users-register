@@ -1,3 +1,15 @@
-@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 html, body { height: 100%; }
+
+
+.paginator .ngx-pagination .current {
+    background: rgb(131, 131, 131);
+    border-radius: 4px;
+    padding-left: 9px;
+    padding-right: 9px;
+}
+
+.paginator .ngx-pagination a:focus, .ngx-pagination button:focus {
+    outline: none;
+    background: #d4d4d4;
+}

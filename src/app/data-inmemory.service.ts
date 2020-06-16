@@ -1,10 +1,14 @@
 import { Injectable } from '@angular/core';
+import {DataSource} from '@angular/cdk/collections';
+import {MatPaginator} from '@angular/material/paginator';
 import {Modelo} from './modelo';
 import {InMemoryDbService} from 'angular-in-memory-web-api';
 
 @Injectable({
   providedIn: 'root'
 })
+
+
 export class DataInmemoryService implements InMemoryDbService{
 
   createDb(){
@@ -80,7 +84,44 @@ export class DataInmemoryService implements InMemoryDbService{
             movil1: '8116723393',
             movil2: '8116723394',
             telefonoCasa: '8116723395',
-            fechaNacimiento: '1987-11-11'}
+            fechaNacimiento: '1987-11-11'},
+            {id:104,
+            tipoUsuario: 'Tipo1',
+            areas: 'Area1',
+            estatus: 'Activo',
+            cliente: 'Cliente1',
+            elementoEstructura: 'Elemento1',
+            numeroTrabajador: '123420F',
+            user: 'Roberto',
+            nombre: 'Roberto',
+            apellidoPaterno: 'Escobar',
+            apellidoMaterno: 'Puentes',
+            correoOficina: 'jose@prueba.com',
+            telefonoOficina: '8116723392',
+            extensionOficina: '52',
+            movil1: '8116723393',
+            movil2: '8116723394',
+            telefonoCasa: '8116723395',
+            fechaNacimiento: '1987-11-11'},
+            {id:105,
+              tipoUsuario: 'Tipo1',
+              areas: 'Area1',
+              estatus: 'Activo',
+              cliente: 'Cliente1',
+              elementoEstructura: 'Elemento1',
+              numeroTrabajador: '123420F',
+              user: 'Alberto',
+              nombre: 'Alberto',
+              apellidoPaterno: 'Silva',
+              apellidoMaterno: 'Puentes',
+              correoOficina: 'jose@prueba.com',
+              telefonoOficina: '8116723392',
+              extensionOficina: '52',
+              movil1: '8116723393',
+              movil2: '8116723394',
+              telefonoCasa: '8116723395',
+              fechaNacimiento: '1987-11-11'}
+
     ];
     return {usuarios};
   }
@@ -90,3 +131,4 @@ export class DataInmemoryService implements InMemoryDbService{
   }
 
 }
+

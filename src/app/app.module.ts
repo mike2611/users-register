@@ -3,12 +3,13 @@ import { NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule} from '@angular/forms';
+import {NgxPaginationModule} from 'ngx-pagination';
+
 
 import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
 import {DataInmemoryService} from './data-inmemory.service';
 
 import { AppRoutingModule } from './app-routing.module';
-import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 import { AppComponent } from './app.component';
@@ -36,7 +37,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
       DataInmemoryService, {dataEncapsulation: false} 
     ),
     NoopAnimationsModule,
-    MatPaginatorModule
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

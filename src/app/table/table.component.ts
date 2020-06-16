@@ -1,8 +1,6 @@
 import { Component, OnInit, ViewChild} from '@angular/core';
 import {Modelo} from '../modelo';
 import {UsuarioService} from '../usuario.service';
-import {MatPaginator} from '@angular/material/paginator';
-
 
 @Component({
   selector: 'app-table',
@@ -12,19 +10,24 @@ import {MatPaginator} from '@angular/material/paginator';
 export class TableComponent implements OnInit {
 
   usuarios: Modelo[] = [];
-  
+  totalUsuarios: number;
+  page = 1;
 
-  constructor(private usuarioService: UsuarioService) { }
+  constructor(private usuarioService: UsuarioService) { 
+
+
+  }
  
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-
   ngOnInit(): void {
     this.getUsuarios();
   }
    
   getUsuarios(): void{
     this.usuarioService.getUsuarios()
-    .subscribe(usuarios => this.usuarios = usuarios);
+    .subscribe(usuarios => {
+      this.usuarios = usuarios
+      this.totalUsuarios = usuarios.length
+    });
   }
   
   //Eliminar un usuario

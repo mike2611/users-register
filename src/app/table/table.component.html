@@ -26,7 +26,8 @@
                 </thead>
                 
                 <tbody>
-                    <tr *ngFor = "let usuario of usuarios">
+                    <tr *ngFor = "let usuario of usuarios | paginate: {id: 'pagination',
+                itemsPerPage: 4, currentPage: page, totalItems:totalUsuarios}">
                         <td scoper="row">{{usuario.numeroTrabajador}}</td>
                         <td>{{usuario.nombre}}</td>
                         <td>{{usuario.apellidoPaterno}}</td>
@@ -42,7 +43,9 @@
                     </tr>
                 </tbody>
             </table>
-            <mat-paginator [pageSizeOptions] = "[4]"></mat-paginator>
-         </div>
+            <div class="separation">
+                <pagination-controls class="paginator" id="pagination" maxSize="2" directionLinks="true" previousLabel="Anterior" nextLabel="Siguiente" (pageChange)="page = $event"></pagination-controls>
+            </div>
+            <div class="separation"></div>
         </div>
     </div>
