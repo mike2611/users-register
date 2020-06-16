@@ -1,6 +1,7 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, ViewChild} from '@angular/core';
 import {Modelo} from '../modelo';
 import {UsuarioService} from '../usuario.service';
+import {MatPaginator} from '@angular/material/paginator';
 
 
 @Component({
@@ -15,10 +16,11 @@ export class TableComponent implements OnInit {
 
   constructor(private usuarioService: UsuarioService) { }
  
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+
   ngOnInit(): void {
     this.getUsuarios();
   }
-
    
   getUsuarios(): void{
     this.usuarioService.getUsuarios()
