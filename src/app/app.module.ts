@@ -14,13 +14,15 @@ import { AppComponent } from './app.component';
 import { ClienteAddUpdateComponent } from './cliente-add-update/cliente-add-update.component';
 import { TableComponent } from './table/table.component';
 import { UserResumenComponent } from './user-resumen/user-resumen.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ClienteAddUpdateComponent,
     TableComponent,
-    UserResumenComponent
+    UserResumenComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,

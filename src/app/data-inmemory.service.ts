@@ -62,7 +62,25 @@ export class DataInmemoryService implements InMemoryDbService{
           movil1: '8116723393',
           movil2: '8116723394',
           telefonoCasa: '8116723395',
-          fechaNacimiento: '1987-11-11'}
+          fechaNacimiento: '1987-11-11'},
+          {id:103,
+            tipoUsuario: 'Tipo1',
+            areas: 'Area1',
+            estatus: 'Activo',
+            cliente: 'Cliente1',
+            elementoEstructura: 'Elemento1',
+            numeroTrabajador: '123420F',
+            user: 'Patricio',
+            nombre: 'Patricio',
+            apellidoPaterno: 'Estrella',
+            apellidoMaterno: 'Martin',
+            correoOficina: 'jose@prueba.com',
+            telefonoOficina: '8116723392',
+            extensionOficina: '52',
+            movil1: '8116723393',
+            movil2: '8116723394',
+            telefonoCasa: '8116723395',
+            fechaNacimiento: '1987-11-11'}
     ];
     return {usuarios};
   }

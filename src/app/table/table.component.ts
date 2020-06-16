@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import {Modelo} from '../modelo';
 import {UsuarioService} from '../usuario.service';
 
@@ -6,7 +6,7 @@ import {UsuarioService} from '../usuario.service';
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
-  styleUrls: ['./table.component.css']
+  styleUrls: ['./table.component.css'],
 })
 export class TableComponent implements OnInit {
 

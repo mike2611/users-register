@@ -5,7 +5,7 @@
 
   .card {
     border-radius: 4px;
-    border: 1px solid #eee;
+    border: 1px solid ;
     background-color: #fafafa;
     height: 40px;
     width: 200px;
@@ -17,4 +17,8 @@
     align-items: center;
     transition: all 0.2s ease-in-out;
     line-height: 24px;
+  }
+
+  body {
+    background-color: #eee;
   }

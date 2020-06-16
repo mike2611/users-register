@@ -16,14 +16,15 @@ export class UserResumenComponent implements OnInit {
     private route: ActivatedRoute,
     private usuarioService: UsuarioService
   ) {
-    if(+this.route.snapshot.paramMap.get('id') > 0)
       this.id = +this.route.snapshot.paramMap.get('id');
-    else
-      this.setIdUsuario();
     }
 
-  ngOnInit(): void {  
+  ngOnInit(): void { 
+    if(this.id > 0) 
       this.getUsuario();
+    else{
+      this.setIdUsuario();
+    }
   }
 
 
@@ -33,8 +34,14 @@ export class UserResumenComponent implements OnInit {
   }
 
   setIdUsuario(): void { //Crea el id para usuarios nuevos, ya que no lo puede obtener de la URL
-    this.id = +this.usuarioService.getUsuarios().subscribe.length + 100;
+    this.id = +this.usuarioService.getUsuarios().subscribe( x => {
+        this.getIdUsuario(x);
+    });
+  }
 
+  getIdUsuario(usuarios : Modelo[]): void{
+    this.id = usuarios.length + 99;
+    this.getUsuario();
   }
 
 
