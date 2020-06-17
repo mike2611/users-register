@@ -32,8 +32,11 @@ export class TableComponent implements OnInit {
   
   //Eliminar un usuario
   delete(usuario: Modelo):void{
+    if(window.confirm("Esta por eliminar este registro esta acción es irreversible"))
+    {
     this.usuarios = this.usuarios.filter(u => u !== usuario);
     this.usuarioService.deleteUsuario(usuario).subscribe();
+    }
   }
 
 
