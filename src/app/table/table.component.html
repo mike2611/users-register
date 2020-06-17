@@ -7,10 +7,10 @@
                 <thead class="table-sm table-bordered">
                     <tr class="orange">
                         <th colspan="6" >Usuarios</th>
-                        <th scope="col">
+                        <th scope="col" class="centeri">
                             <i class="fas fa-search"></i>
                         </th>
-                        <th scope="col" routerLink="/addupdate"> 
+                        <th scope="col" class="centeri" routerLink="/addupdate"> 
                             <i class="fas fa-user-plus"></i>
                         </th>
                     </tr>
@@ -34,10 +34,10 @@
                         <td>{{usuario.apellidoMaterno}}</td>
                         <td>{{usuario.tipoUsuario}}</td>
                         <td>{{usuario.estatus}}</td>
-                        <td routerLink="/addupdate/{{usuario.id}}">
+                        <td class="centeri" routerLink="/addupdate/{{usuario.id}}">
                             <i class="fas fa-pencil-alt"></i>
                         </td>
-                        <td (click)="delete(usuario)">
+                        <td class="centeri" (click)="delete(usuario)">
                             <i class="far fa-trash-alt i color"></i>
                         </td>
                     </tr>

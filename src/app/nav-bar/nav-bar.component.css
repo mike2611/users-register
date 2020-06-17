@@ -1,0 +1,44 @@
+.header{
+    background-color: rgb(102, 102, 102);
+    width: 100%; 
+    height: 6%;
+    margin-bottom: 7%; 
+}
+
+
+nav.first{
+    background-color: rgb(224, 117, 28);
+    color: whitesmoke;     
+}
+nav.second{
+    background-color: white;
+    padding: 0%;
+}
+
+.container{
+    width: 65%;
+}
+
+.navbar.first{
+    height: 2rem;
+}
+
+a.white{
+    color: whitesmoke; 
+}
+
+a.big-text{
+    font-size: medium;
+}
+
+a.gray{
+    color: rgb(54, 54, 54);
+    text-align: center;
+}
+
+img{
+    width: 20%;
+}
+
+
+
