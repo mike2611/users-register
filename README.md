@@ -1,27 +1,34 @@
-# ProyectoOdessa
+# Proyecto Odessa
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.6.
+> This project is a table for users. Where users can be added, deleted, or modified.
+
+![screenshot](/images/screenShot.png)
+
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+ 
+## Built With
 
-## Code scaffolding
+- HtML, CSS, TS
+- Angular
+- VSCode
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Live Demo
+Link -> https://mike2611.github.io/proyecto-odessa/table
 
-## Build
+## Authors
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+👤 **Miguel Angel Puentes**
+- GitHub: [@mike2611](https://github.com/mike2611)
+- Twitter: [@MiguelP2611](https://twitter.com/MiguelP2611)
+- LinkedIn: [Miguel Puentes Mata](https://linkedin.com/in/miguel-puentes-mata-90a562139/)
 
-## Running unit tests
+## Contributing
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Contributions, issues, and feature requests are welcome!
 
-## Running end-to-end tests
+## Show your support
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Give a ⭐️ if you like this project!
