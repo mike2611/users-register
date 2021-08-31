@@ -16,7 +16,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 - VSCode
 
 ## Live Demo
-Link -> https://mike2611.github.io/proyecto-odessa/table
+Link ->https://mike2611.github.io/users-register/
 
 ## Authors
 
