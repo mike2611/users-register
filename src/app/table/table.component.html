@@ -1,51 +1,54 @@
-    <div class="container">
-        <div class="jumbotron p-4 p-md-5 rounded-lg bg-white shadow">
-         <h1 class="separation">Editar un usuario existente</h1> 
-         <h3 class="form-text text-muted">&nbsp;&nbsp;&nbsp;<i class="fas fa-caret-right color"></i>Da click en Editar para modificar datos o Eliminar para borrar un usuario </h3> 
-         <div class="table-responsive">  
-            <table class="table table-striped  color">
-                <thead class="table-sm table-bordered">
-                    <tr class="orange">
-                        <th colspan="6" >Usuarios</th>
-                        <th scope="col" class="centeri">
-                            <i class="fas fa-search"></i>
-                        </th>
-                        <th scope="col" class="centeri" routerLink="/addupdate"> 
-                            <i class="fas fa-user-plus"></i>
-                        </th>
-                    </tr>
-                    <tr class="gray">
-                        <th scope="col">No.Trabajador</th>
-                        <th scope="col">Nombre(s)</th>
-                        <th scope="col">Apellido Paterno</th>
-                        <th scope="col">Apellido Materno</th>
-                        <th scope="col">Tipo Usuario</th>
-                        <th scope="col">Estatus</th>
-                        <th scope="col" colspan="2"></th>  
-                    </tr>
-                </thead>
-                
-                <tbody>
-                    <tr *ngFor = "let usuario of usuarios | paginate: {id: 'pagination',
-                itemsPerPage: 4, currentPage: page, totalItems:totalUsuarios}">
-                        <td scoper="row">{{usuario.numeroTrabajador}}</td>
-                        <td>{{usuario.nombre}}</td>
-                        <td>{{usuario.apellidoPaterno}}</td>
-                        <td>{{usuario.apellidoMaterno}}</td>
-                        <td>{{usuario.tipoUsuario}}</td>
-                        <td>{{usuario.estatus}}</td>
-                        <td class="centeri" routerLink="/addupdate/{{usuario.id}}">
-                            <i class="fas fa-pencil-alt"></i>
-                        </td>
-                        <td class="centeri" (click)="delete(usuario)">
-                            <i class="far fa-trash-alt i color"></i>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="separation">
-                <pagination-controls class="paginator" id="pagination" maxSize="2" directionLinks="true" previousLabel="Anterior" nextLabel="Siguiente" (pageChange)="page = $event"></pagination-controls>
-            </div>
-            <div class="separation"></div>
-        </div>
-    </div>
+<div class=" d-flex justify-content-center mr-5">
+  <div class="container">
+      <div class="jumbotron p-4 p-md-5 rounded-lg bg-white shadow">
+       <h1 class="separation">Edit an existing user</h1>
+       <h3 class="form-text text-muted">&nbsp;&nbsp;&nbsp;<i class="fas fa-caret-right color"></i>Click in the pencil icon to edit or Click the trash-can icon to delete a user</h3>
+       <div class="table-responsive">
+          <table class="table table-striped  color">
+              <thead class="table-sm table-bordered">
+                  <tr class="orange">
+                      <th colspan="6" >Usuarios</th>
+                      <th scope="col" class="centeri">
+                          <i class="fas fa-search"></i>
+                      </th>
+                      <th scope="col" class="centeri" routerLink="/addupdate">
+                          <i class="fas fa-user-plus"></i>
+                      </th>
+                  </tr>
+                  <tr class="gray">
+                      <th scope="col">Employee Number</th>
+                      <th scope="col">First Name</th>
+                      <th scope="col">Middle Name</th>
+                      <th scope="col">Last Name</th>
+                      <th scope="col">User Type</th>
+                      <th scope="col">Status</th>
+                      <th scope="col" colspan="2"></th>
+                  </tr>
+              </thead>
+
+              <tbody>
+                  <tr *ngFor = "let usuario of usuarios | paginate: {id: 'pagination',
+              itemsPerPage: 4, currentPage: page, totalItems:totalUsuarios}">
+                      <td scoper="row">{{usuario.numeroTrabajador}}</td>
+                      <td>{{usuario.nombre}}</td>
+                      <td>{{usuario.apellidoPaterno}}</td>
+                      <td>{{usuario.apellidoMaterno}}</td>
+                      <td>{{usuario.tipoUsuario}}</td>
+                      <td>{{usuario.estatus}}</td>
+                      <td class="centeri" routerLink="/addupdate/{{usuario.id}}">
+                          <i class="fas fa-pencil-alt"></i>
+                      </td>
+                      <td class="centeri" (click)="delete(usuario)">
+                          <i class="far fa-trash-alt i color"></i>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+          <div class="separation">
+              <pagination-controls class="paginator" id="pagination" maxSize="2" directionLinks="true" previousLabel="Previous" nextLabel="Next" (pageChange)="page = $event"></pagination-controls>
+          </div>
+          <div class="separation"></div>
+      </div>
+      </div>
+</div>
+</div>
