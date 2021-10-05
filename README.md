@@ -1,4 +1,4 @@
-# Proyecto Odessa
+# User Registration
 
 > This project is a table for users. Where users can be added, deleted, or modified.
 
