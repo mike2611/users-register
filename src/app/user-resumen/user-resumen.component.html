@@ -1,74 +1,76 @@
-<div class="container">
-  <div class="jumbotron p-4 p-md-5 rounded-lg bg-white">
-      <h1>Resumen Usuario</h1>
-      <form>
-          <div class="form-row separation">
-              <h3 class="form-text text-muted">The user has been updated successfully.</h3>
-          </div>
-          <div class="form-row">
-              <div class="col-md-4 mb-3">
-                  <label for="id">Employee Number</label>
-                  <input type="text" class="form-control" id="id" [(ngModel)]="usuario.id"
-                  name="id" disabled>
-              </div>
-              <div class="col-md-4 mb-3">
-                  <label for="tipoUsuario">User Type</label>
-                  <input class="form-control" id="tipoUsuario" [(ngModel)]="usuario.tipoUsuario"
-                  name="tipoUsuario" disabled>
-              </div>
-              <div class="col-md-4 mb-3">
-                  <label for="estatus">Status</label>
-                  <input class="form-control" id="estatus" [(ngModel)]="usuario.estatus"
-                  name="estatus" disabled>
-              </div>
+<div class=" d-flex justify-content-center mr-5">
+  <div class="container">
+    <div class="jumbotron p-4 p-md-5 rounded-lg bg-white">
+        <h1>User {{usuario.nombre}}</h1>
+        <form>
+            <div class="form-row separation">
+                <h3 class="form-text text-muted">The user has been updated successfully.</h3>
+            </div>
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <label for="id">Employee Number</label>
+                    <input type="text" class="form-control" id="id" [(ngModel)]="usuario.id"
+                    name="id" disabled>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="tipoUsuario">User Type</label>
+                    <input class="form-control" id="tipoUsuario" [(ngModel)]="usuario.tipoUsuario"
+                    name="tipoUsuario" disabled>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="estatus">Status</label>
+                    <input class="form-control" id="estatus" [(ngModel)]="usuario.estatus"
+                    name="estatus" disabled>
+                </div>
 
-          </div>
-          <div class="form-row">
-              <div class="col-md-4 mb-3">
-                  <label for="nombres">Name</label>
-                  <input type="text" class="form-control" id="nombres" [(ngModel)]="usuario.nombre"
-                  name="nombre" disabled>
-              </div>
-              <div class="col-md-4 mb-3">
-                  <label for="cliente">Customer</label>
-                  <input class="form-control" id="cliente" [(ngModel)]="usuario.cliente"
-                  name="cliente" disabled>
-              </div>
-              <div class="col-md-4 mb-3">
-                  <label for="elementoEstructura">Element</label>
-                  <input class="form-control" id="elementoEstructura" [(ngModel)]="usuario.elementoEstructura"
-                  name="elementoEstructura" disabled>
-              </div>
-          </div>
-          <div class="form-row separation">
-              <h3 class="form-text text-muted">What to do next?</h3>
-          </div>
-              <h4 class="form-text text-muted">&nbsp;&nbsp;&nbsp;<i class="fas fa-caret-right color"></i> Select one of the options</h4>
-      </form>
+            </div>
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <label for="nombres">Name</label>
+                    <input type="text" class="form-control" id="nombres" [(ngModel)]="usuario.nombre"
+                    name="nombre" disabled>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="cliente">Customer</label>
+                    <input class="form-control" id="cliente" [(ngModel)]="usuario.cliente"
+                    name="cliente" disabled>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="elementoEstructura">Element</label>
+                    <input class="form-control" id="elementoEstructura" [(ngModel)]="usuario.elementoEstructura"
+                    name="elementoEstructura" disabled>
+                </div>
+            </div>
+            <div class="form-row separation">
+                <h3 class="form-text text-muted">What to do next?</h3>
+            </div>
+                <h4 class="form-text text-muted">&nbsp;&nbsp;&nbsp;<i class="fas fa-caret-right color"></i> Select one of the options</h4>
+        </form>
 
-      <div>
-          <div class="row centrar">
-          <div class="col-lg-3">
-              <i class="fas fa-user-plus fa-4x" routerLink="/addupdate"></i>
-              <h3>Register a <br>new user</h3>
-              <p>Create a new user.Here you enter data and assign access profiles and information.</p>
-          </div>
-          <div class="col-lg-3">
-              <i class="fas fa-user-edit fa-4x" routerLink="/table"></i>
-              <h3>Edit an existing<br>user</h3>
-              <p>Modify existing users Here you can consult, modify, activate, deactivate or delete users.</p>
-          </div>
-          <div class="col-lg-3">
-              <i class="fas fa-sticky-note fa-4x"></i>
-              <h3>Assign profiles <br>to a user</h3>
-              <p>Create or update the administrator user record.</p>
-          </div>
-          <div class="col-lg-3">
-              <i class="fas fa-users fa-4x"></i>
-              <h3>Mass Upload of<br>users</h3>
-              <p>Here you upload an Excel file with the users you want to create.</p>
-          </div>
-          </div>
-      </div>
+        <div>
+            <div class="row centrar">
+            <div class="col-lg-3">
+                <i class="fas fa-user-plus fa-4x" routerLink="/addupdate"></i>
+                <h3>Register a <br>new user</h3>
+                <p>Create a new user.Here you enter data and assign access profiles and information.</p>
+            </div>
+            <div class="col-lg-3">
+                <i class="fas fa-user-edit fa-4x" routerLink="/table"></i>
+                <h3>Edit an existing<br>user</h3>
+                <p>Modify existing users Here you can consult, modify, activate, deactivate or delete users.</p>
+            </div>
+            <div class="col-lg-3">
+                <i class="fas fa-sticky-note fa-4x"></i>
+                <h3>Assign profiles <br>to a user</h3>
+                <p>Create or update the administrator user record.</p>
+            </div>
+            <div class="col-lg-3">
+                <i class="fas fa-users fa-4x"></i>
+                <h3>Mass Upload of<br>users</h3>
+                <p>Here you upload an Excel file with the users you want to create.</p>
+            </div>
+            </div>
+        </div>
+    </div>
   </div>
 </div>

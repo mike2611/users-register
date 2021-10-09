@@ -12,7 +12,7 @@ import { UsuarioService } from '../usuario.service';
 })
 export class ClienteAddUpdateComponent implements OnInit {
   @Input() usuario: Modelo = {} as Modelo;
-  titulo: string = 'Añadir'; // Se define el titulo
+  titulo: string = 'Add'; // Se define el titulo
   id: number;
   usuarios: Modelo[] = [];
   updatedUser: boolean = true;
@@ -36,7 +36,7 @@ export class ClienteAddUpdateComponent implements OnInit {
   getUsuario(): void {
     this.usuarioService.getUsuario(this.id)
       .subscribe(usuario => this.usuario = usuario);
-    this.titulo = 'Editar'; // Se modifica el titulo
+    this.titulo = 'Update'; // Se modifica el titulo
   }
 
   goBack(): void {
@@ -54,7 +54,7 @@ export class ClienteAddUpdateComponent implements OnInit {
     }
   }
 
- 
+
 
 
 

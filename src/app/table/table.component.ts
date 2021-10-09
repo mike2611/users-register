@@ -13,15 +13,15 @@ export class TableComponent implements OnInit {
   totalUsuarios: number;
   page = 1;
 
-  constructor(private usuarioService: UsuarioService) { 
+  constructor(private usuarioService: UsuarioService) {
 
 
   }
- 
+
   ngOnInit(): void {
     this.getUsuarios();
   }
-   
+
   getUsuarios(): void{
     this.usuarioService.getUsuarios()
     .subscribe(usuarios => {
@@ -29,10 +29,10 @@ export class TableComponent implements OnInit {
       this.totalUsuarios = usuarios.length
     });
   }
-  
+
   //Eliminar un usuario
   delete(usuario: Modelo):void{
-    if(window.confirm("Esta por eliminar este registro esta acción es irreversible"))
+    if(window.confirm("You are about to delete this record, this action is irreversible"))
     {
     this.usuarios = this.usuarios.filter(u => u !== usuario);
     this.usuarioService.deleteUsuario(usuario).subscribe();
