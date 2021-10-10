@@ -1,6 +1,6 @@
 # User Registration
 
-> This project is a table for users. Where users can be added, deleted, or modified.
+> This project is a table for users. Where you can add, delete, or modify users. Each time you update or add a user it shows you a summary of the user.
 
 ![screenshot](/images/screenShot.png)
 
